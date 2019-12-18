@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In-->
+        <scene sceneID="Ygo-T6-cBy">
+            <objects>
+                <viewController storyboardIdentifier="VCSignIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hBo-UE-c6R" customClass="VCSignIn" customModule="coordinator_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZD-Hc-0PK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-kV-Ime">
+                                <rect key="frame" x="163.5" y="429" width="87" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="signInAction:" destination="hBo-UE-c6R" eventType="touchUpInside" id="30o-Ga-gRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc5-yC-OJG">
+                                <rect key="frame" x="180.5" y="806" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Z99-6p-VcT" kind="custom" identifier="toAbout" customClass="CoordinatorPresentSegue" customModule="AppCoordinator" id="evy-1K-P5y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Xe-kV-Ime" firstAttribute="centerX" secondItem="ouV-j5-kCB" secondAttribute="centerX" id="XGN-P7-Gkc"/>
+                            <constraint firstItem="9Xe-kV-Ime" firstAttribute="centerY" secondItem="ouV-j5-kCB" secondAttribute="centerY" id="og7-gH-KMH"/>
+                            <constraint firstItem="nc5-yC-OJG" firstAttribute="centerX" secondItem="ouV-j5-kCB" secondAttribute="centerX" id="tHf-w2-umW"/>
+                            <constraint firstItem="nc5-yC-OJG" firstAttribute="bottom" secondItem="ouV-j5-kCB" secondAttribute="bottom" constant="-20" id="uWq-8I-6AC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ouV-j5-kCB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9d-NA-Xcl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-29"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="E0w-qP-emW">
+            <objects>
+                <viewController id="Z99-6p-VcT" customClass="VCAbout" customModule="coordinator_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZt-TB-8Hy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc5-sV-a0g">
+                                <rect key="frame" x="182" y="806" width="50" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="Z99-6p-VcT" eventType="touchUpInside" id="raO-cf-xdP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxY-sm-h9J">
+                                <rect key="frame" x="168" y="94" width="78.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-KX-aLg">
+                                <rect key="frame" x="20" y="160" width="374" height="616"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pxY-sm-h9J" firstAttribute="top" secondItem="ZPY-2z-JIf" secondAttribute="top" constant="50" id="9Pz-g8-MfA"/>
+                            <constraint firstItem="xc5-sV-a0g" firstAttribute="top" secondItem="uwn-KX-aLg" secondAttribute="bottom" constant="30" id="O4N-NM-BmE"/>
+                            <constraint firstItem="pxY-sm-h9J" firstAttribute="centerX" secondItem="ZPY-2z-JIf" secondAttribute="centerX" id="QES-l7-dSc"/>
+                            <constraint firstItem="uwn-KX-aLg" firstAttribute="leading" secondItem="ZPY-2z-JIf" secondAttribute="leading" constant="20" id="Qyg-bg-ssb"/>
+                            <constraint firstItem="uwn-KX-aLg" firstAttribute="top" secondItem="pxY-sm-h9J" secondAttribute="bottom" constant="30" id="YPt-rZ-XhB"/>
+                            <constraint firstItem="xc5-sV-a0g" firstAttribute="bottom" secondItem="ZPY-2z-JIf" secondAttribute="bottom" constant="-20" id="add-eT-K4j"/>
+                            <constraint firstItem="ZPY-2z-JIf" firstAttribute="trailing" secondItem="uwn-KX-aLg" secondAttribute="trailing" constant="20" id="eyY-ZL-J6P"/>
+                            <constraint firstItem="xc5-sV-a0g" firstAttribute="centerX" secondItem="ZPY-2z-JIf" secondAttribute="centerX" id="giI-1t-xpp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZPY-2z-JIf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drp-sv-HNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="-29.464285714285712"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.70848274389999999" green="0.37025338299999999" blue="0.78529357830000002" alpha="1" colorSpace="calibratedRGB"/>
+</document>
