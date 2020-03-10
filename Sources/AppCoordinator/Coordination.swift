@@ -35,6 +35,13 @@ public struct Coordination {
         
         if let to = self.to as? UINavigationController {
             viewController = to.topViewController ?? self.to
+        } else if let to = self.to as? UISplitViewController {
+            let master = to.viewControllers.first
+            if let navigation = master as? UINavigationController {
+                viewController = navigation.topViewController ?? self.to
+            } else {
+                viewController = master ?? self.to
+            }
         }
         
         guard let _viewController = viewController as? T else {

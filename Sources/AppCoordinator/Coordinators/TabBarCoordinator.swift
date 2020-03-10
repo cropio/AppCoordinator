@@ -36,7 +36,7 @@ public extension TabBarCoordinator {
     func tab<Tab: TabCoordinator>(for coordinator: Tab) throws -> UIViewController {
         try coordinator.start()
         
-        guard let viewController = coordinator.rootViewController else {
+        guard let viewController = coordinator.rootViewController as? UIViewController else {
             throw CoordinatorError.start(message: "TabCoordinator start not correct, root view controller not seted")
         }
         return viewController
