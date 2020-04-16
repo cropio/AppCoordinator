@@ -31,6 +31,7 @@
 		158041F322A03F6400302254 /* CRPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158041F222A03F6400302254 /* CRPopover.swift */; };
 		158041F522A03F8500302254 /* VCPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158041F422A03F8500302254 /* VCPopover.swift */; };
 		158041F722A03FDA00302254 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158041F622A03FDA00302254 /* Popover.storyboard */; };
+		15B0347924485A9F003F33A7 /* VCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B0347824485A9F003F33A7 /* VCMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		158041F222A03F6400302254 /* CRPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRPopover.swift; sourceTree = "<group>"; };
 		158041F422A03F8500302254 /* VCPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPopover.swift; sourceTree = "<group>"; };
 		158041F622A03FDA00302254 /* Popover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
+		15B0347824485A9F003F33A7 /* VCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				158041E722A02CAE00302254 /* CRMain.swift */,
+				15B0347824485A9F003F33A7 /* VCMain.swift */,
 				158041F122A03F5C00302254 /* Popover */,
 				158041EA22A0398C00302254 /* Detail */,
 				158041E922A0397E00302254 /* Tabs */,
@@ -294,6 +297,7 @@
 				1555BB43226DEFED009892CF /* VCSignIn.swift in Sources */,
 				158041E822A02CAE00302254 /* CRMain.swift in Sources */,
 				158041F522A03F8500302254 /* VCPopover.swift in Sources */,
+				15B0347924485A9F003F33A7 /* VCMain.swift in Sources */,
 				1555BB48226DF493009892CF /* CRAbout.swift in Sources */,
 				158041F322A03F6400302254 /* CRPopover.swift in Sources */,
 				158041DE22A02C0600302254 /* CRTab2.swift in Sources */,
