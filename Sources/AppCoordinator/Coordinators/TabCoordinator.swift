@@ -37,6 +37,11 @@ public extension TabCoordinator {
     func configuration(rootViewController: RootType) throws { /* optional */ }
 }
 
+public extension TabCoordinator where RootType == UIViewController {
+    func configuration(rootViewController: RootType) throws { /* optional */ }
+    func setRootViewController(rootViewController: RootType) { /* optional */ }
+}
+
 public extension TabCoordinator {
 
     func start() throws {
@@ -48,7 +53,7 @@ public extension TabCoordinator {
         } else if RootType.self == UINavigationController.self {
             try self.startNavigationController()
         } else {
-            CoordinatorError.start(message: "Unknown RootType")
+            throw CoordinatorError.start(message: "Unknown RootType")
         }
     }
 

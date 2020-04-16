@@ -10,6 +10,7 @@ import UIKit
 import AppCoordinator
 
 class CRMain: TabBarCoordinator {
+    typealias TB = VCMain
 
     var storyboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: nil)
@@ -25,9 +26,9 @@ class CRMain: TabBarCoordinator {
         self.window = window
     }
     
-    private(set) weak var tabBarController: UITabBarController?
+    private(set) weak var tabBarController: TB?
     
-    func configuration(tabBarController: UITabBarController) throws {
+    func configuration(tabBarController: TB) throws {
         let tab1 = CRTab1()
         let tab2 = CRTab2()
         let tab3 = CRTab3()
@@ -39,7 +40,7 @@ class CRMain: TabBarCoordinator {
         ]
     }
     
-    func setTabBarController(tabBarController: UITabBarController) {
+    func setTabBarController(tabBarController: TB) {
         self.tabBarController = tabBarController
     }
 }
