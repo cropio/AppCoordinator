@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol CoordinatorDelegate: class {
+public protocol CoordinatorDelegate: AnyObject {
     func willStart(in coordinator: Coordinator)
     func didStart(in coordinator: Coordinator)
     func willStop(in coordinator: Coordinator)

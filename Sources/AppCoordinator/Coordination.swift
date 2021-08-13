@@ -8,13 +8,13 @@
 import UIKit
 
 public struct Coordination {
-    enum CoordinationType {
+    public enum CoordinationType {
         case push
         case present
         case showDetail
     }
     
-    let type: CoordinationType
+    public let type: CoordinationType
     weak var from: UIViewController?
     weak var to: UIViewController?
     public var animated: Bool
